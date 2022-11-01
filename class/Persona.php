@@ -12,6 +12,7 @@ class Persona {
     protected $_nacionalidad;
     protected $_idGenero;
     public $genero;
+    public $domicilio;
     
 
 

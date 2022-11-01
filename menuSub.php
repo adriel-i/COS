@@ -26,28 +26,28 @@ const CLIENTE_PROFESIONAL = 4;
 ?>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link rel="shortcut icon" href="imagenes/Marca/Marca2.png">
-		<link rel="stylesheet" href="css/styleMenu.css">
-		<!-- <script src="js/jquery-3.6.0.min.js"></script> -->
-		<style type="text/css">
-			div.menu nav ul.general li a.invisible {
-				
-				background-color: transparent;
-				margin-bottom: 0px;
-				margin-top: -10px;
-				margin-right: 15px;
-			}
-		</style>
-	</head>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="shortcut icon" href="../../imagenes/Marca/Marca2.png">
+	<link rel="stylesheet" href="../../css/styleMenu.css">
+
+	<style type="text/css">
+		div.menu nav ul.general li a.invisible {
+			
+			background-color: transparent;
+			margin-bottom: 0px;
+			margin-top: -10px;
+			margin-right: 15px;
+		}
+	</style>
+</head>
 	<body>
 
 		<div class="menu">
 			<nav>
 				<ul class="general">
-					<li><a class="invisible" href="inicio.php"><img src="imagenes/Marca/Marca1.png" class="marcaMenu"></a></li>
+					<li><a class="invisible" href="../../inicio.php"><img src="../../imagenes/Marca/Marca1.png" class="marcaMenu"></a></li>
 					<li><a href="/Proyectos/COS_2.0/inicio.php">Inicio</a></li>
 
 					<!-- ADMINISTRADOR -->
@@ -103,7 +103,6 @@ const CLIENTE_PROFESIONAL = 4;
 						<li><a href="/Proyectos/COS_2.0/modulos/usuarios_servicios/listado_usuarios_servicios.php" id="doubleLine">
 						Servicios de Usuarios</a></li>
 						<li><a href="/Proyectos/COS_2.0/modulos/contrataciones/listado_contrataciones.php?id_usuario=<?php echo $idUsuario?>">Contrataciones</a></li>
-					
 						<li class="dropDown"><a href="#">Reportes</a>
 							<div class="dropDown-content">
 								<ul class="drop">
@@ -118,12 +117,11 @@ const CLIENTE_PROFESIONAL = 4;
 						</li>
 					<?php } ?>
 
-					<!-- PROFESIONAL -->
+					<!-- PROFESIONAL / CLIENTE_PROFESIONAL -->
 
 					<?php if ($idPerfil == PROFESIONAL) { ?>
 						<li><a id="doubleLine" href="/Proyectos/COS_2.0/modulos/solicitud_servicio/listado_solicitudes.php?id_usuario=<?php echo $idUsuario?>">Solicitudes de Servicios</a></li>
 						<li><a id="doubleLine" href="/Proyectos/COS_2.0/modulos/servicios_ofrecidos/listado_servicios_ofrecidos.php?id_usuario=<?php echo $idUsuario?>">Servicios Ofrecidos</a></li>
-						<!-- <li><a  href="/Proyectos/COS_2.0/modulos/usuarios/detalle_usuario.php?id_usuario=<?php //echo $idUsuario?>">Mi Perfil</a></li> -->
 					<?php } ?>
 
 					<!-- CLIENTE -->
@@ -133,8 +131,6 @@ const CLIENTE_PROFESIONAL = 4;
 						<li><a id="doubleLine" href="/Proyectos/COS_2.0/modulos/usuario_contrataciones/listado_usuario_contrataciones.php?id_usuario=<?php echo $idUsuario?>">Mis Contrataciones</a></li>
 					<?php } ?>
 
-					<!-- CLIENTE/PROFESIONAL -->
-					
 					<?php if ($idPerfil == CLIENTE_PROFESIONAL) { ?>
 						<li><a id="doubleLine" href="/Proyectos/COS_2.0/modulos/contratar_servicio/listado_contratar_servicio.php?id_usuario=<?php echo $idUsuario?>">Contratar Servicio</a></li>
 						<li><a id="doubleLine" href="/Proyectos/COS_2.0/modulos/usuario_contrataciones/listado_usuario_contrataciones.php?id_usuario=<?php echo $idUsuario?>">Mis Contrataciones</a></li>
@@ -143,9 +139,13 @@ const CLIENTE_PROFESIONAL = 4;
 					<?php } ?>
 
 					<!-- <li id="login"><a href="/Proyectos/COS_2.0/form_login.php">Login</a></li> -->
-					<li id="cerrarSesion"><a href="/Proyectos/COS_2.0/cerrar_sesion.php" id="">Cerrar Sesion</a></li>
+
+					<li id="cerrarSesion"><a href="/Proyectos/COS_2.0/cerrar_sesion.php" id="doubleLine">Cerrar Sesion</a></li>
 				</ul> 
 			</nav>
 		</div>
+
+		<br><br>
+
 	</body>
 </html>

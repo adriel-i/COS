@@ -126,10 +126,11 @@ class Domicilio {
 
 		$database = new MySQL();
 
-		$sql = "INSERT INTO domicilios "
-		     . "VALUES (NULL, {$this->_idPersona}, '{$this->_calle}', {$this->_altura}, '{$this->_manzana}', "
-		     . "{$this->_numeroCasa}, '{$this->_torre}', {$this->_piso}, '{$this->_observaciones}', '{$this->_barrio}')";
-
+		$sql = "INSERT INTO domicilios (id_domicilio, id_persona, barrio, calle, altura, manzana, numero_casa, torre, piso, observaciones) "
+		     . "VALUES (NULL, {$this->_idPersona}, '{$this->_barrio}', '{$this->_calle}', '{$this->_altura}', "
+		     . "'{$this->_manzana}', '{$this->_numeroCasa}', '{$this->_torre}', '{$this->_piso}', '{$this->_observaciones}')";
+		// echo($sql);
+		// exit;
 		$database->insertar($sql);
 
 	}

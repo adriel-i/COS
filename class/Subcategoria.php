@@ -76,8 +76,8 @@ class Subcategoria {
 
         $database = new MySQL();
 
-        $sql = "INSERT INTO subcategorias (`id_subcategoria`, `nombre`, `id_categoria`) VALUES "
-             . "(NULL, '{$this->_nombre}', {$this->_idCategoria})";
+        $sql = "INSERT INTO subcategorias (`id_subcategoria`, `nombre`, `id_categoria`, `id_estado_atributo`) VALUES "
+             . "(NULL, '{$this->_nombre}', {$this->_idCategoria}, 1)";
 
         $database->insertar($sql);
 
@@ -102,6 +102,24 @@ class Subcategoria {
         return $subcategoria;
     }
 
+    public static function obtenerPorIdCategoria($idCategoria) {
+
+        $sql = "SELECT * FROM subcategorias "
+             . "WHERE id_categoria=" . $idCategoria;
+
+        $database = new MySQL();
+        $datos = $database->consultar($sql);
+        $listadoSubcategorias= [];
+
+        while ($registro = $datos->fetch_assoc()) {
+
+            $subcategoria = self::_crearSubcategoria($registro);
+
+            $listadoSubcategorias[] = $subcategoria;
+        }
+
+        return $listadoSubcategorias;
+    }
 
     // CREAR SUBCATEGORIA
 

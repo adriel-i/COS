@@ -12,36 +12,30 @@ class Servicio {
 
     // ID SERVICIO
 
-    public function getIdServicio()
-    {
+    public function getIdServicio() {
         return $this->_idServicio;
     }
-    public function setIdServicio($_idServicio)
-    {
+    public function setIdServicio($_idServicio) {
         $this->_idServicio = $_idServicio;
         return $this;
     }
 
     // NOMBRE
 
-    public function getNombre()
-    {
+    public function getNombre() {
         return $this->_nombre;
     }
-    public function setNombre($_nombre)
-    {
+    public function setNombre($_nombre) {
         $this->_nombre = $_nombre;
         return $this;
     }
 
     // ID SUBCATEGORIA
 
-    public function getIdSubcategoria()
-    {
+    public function getIdSubcategoria() {
         return $this->_idSubcategoria;
     }
-    public function setIdSubcategoria($_idSubcategoria)
-    {
+    public function setIdSubcategoria($_idSubcategoria) {
         $this->_idSubcategoria = $_idSubcategoria;
         return $this;
     }
@@ -50,8 +44,7 @@ class Servicio {
 
     // OBTENER TODOS
 
-    public static function obtenerTodos()
-    {
+    public static function obtenerTodos() {
         $sql = "SELECT * FROM servicios WHERE id_estado_atributo = 1";
 
         $database = new MySQL();
@@ -74,8 +67,8 @@ class Servicio {
 
         $database = new MySQL();
 
-        $sql = "INSERT INTO servicios (`id_servicio`, `nombre`, `id_subcategoria`) VALUES "
-             . "(NULL, '{$this->_nombre}', {$this->_idSubcategoria})";
+        $sql = "INSERT INTO servicios (`id_servicio`, `nombre`, `id_subcategoria`, `id_estado_atributo`) VALUES "
+             . "(NULL, '{$this->_nombre}', {$this->_idSubcategoria}, 1)";
 
         $database->insertar($sql);
 
@@ -83,10 +76,9 @@ class Servicio {
 
     // OBTENER POR ID
 
-    public static function obtenerPorId($id) {
+    public static function obtenerPorId($idServicio) {
 
-        $sql = "SELECT * FROM servicios "
-             . "WHERE id_servicio=" . $id;
+        $sql = "SELECT * FROM servicios WHERE id_servicio=" . $idServicio;
 
         $database = new MySQL();
         $datos = $database->consultar($sql);
@@ -106,7 +98,7 @@ class Servicio {
         $servicio->_idServicio = $datos["id_servicio"];
         $servicio->_nombre = $datos["nombre"];
         $servicio->_idSubcategoria = $datos["id_subcategoria"];
-        $servicio->categoria = Subcategoria::obtenerPorId($servicio->_idSubcategoria);
+        $servicio->subcategoria = Subcategoria::obtenerPorId($servicio->_idSubcategoria);
         
         return $servicio;
     }
@@ -136,6 +128,26 @@ class Servicio {
         
         $database->darBaja($sql);
     }
+
+    public static function obtenerPorIdSubcategoria($idSubcategoria) {
+
+        $sql = "SELECT * FROM servicios "
+             . "WHERE id_subcategoria=" . $idSubcategoria;
+
+        $database = new MySQL();
+        $datos = $database->consultar($sql);
+        $listadoServicios= [];
+
+        while ($registro = $datos->fetch_assoc()) {
+
+            $servicio = self::_crearServicio($registro);
+
+            $listadoServicios[] = $servicio;
+        }
+
+        return $listadoServicios;
+    }
+    
 
 }
 

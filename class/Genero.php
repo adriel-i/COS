@@ -119,6 +119,21 @@ class Genero {
         // HACER PRIMERO EL UPDATE EN UN SQL Y LUEGO EL DELETE EN OTRO SQL
     }
 
+    public static function obtenerGeneros() {
+
+        $sql = "SELECT g.descripcion, COUNT(p.id_genero) AS cantidad_genero "
+                ."FROM personas p JOIN generos g ON p.id_genero = g.id_genero "
+                ."RIGHT JOIN usuarios u ON u.id_persona = p.id_persona "
+                ."WHERE u.id_estado_usuario = 1 "
+                ."GROUP BY g.descripcion "
+                ."ORDER BY cantidad_genero DESC";
+
+        $database = new MySQL();
+        $datos = $database->consultar($sql);
+
+        return $datos;
+    }
+
 }
 
 ?>

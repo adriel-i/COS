@@ -8,28 +8,23 @@ class Categoria {
     private $_nombre;
 
 
-    public function getIdCategoria()
-    {
+    public function getIdCategoria() {
         return $this->_idCategoria;
     }
 
-
-    public function setIdCategoria($_idCategoria)
-    {
+    public function setIdCategoria($_idCategoria) {
         $this->_idCategoria = $_idCategoria;
 
         return $this;
     }
 
 
-    public function getNombre()
-    {
+    public function getNombre() {
         return $this->_nombre;
     }
 
 
-    public function setNombre($_nombre)
-    {
+    public function setNombre($_nombre) {
         $this->_nombre = $_nombre;
 
         return $this;
@@ -47,7 +42,7 @@ class Categoria {
         return $categoria;
     }
 
-// OBTENER TODOS
+    // OBTENER TODOS
 
     public static function obtenerTodos()
     {
@@ -66,7 +61,7 @@ class Categoria {
 
         return $listadoCategorias;
     }
-
+    //OBTENER POR ID
 
     public static function obtenerPorId($id) {
 
@@ -92,8 +87,8 @@ class Categoria {
 
         $database = new MySQL();
 
-        $sql = "INSERT INTO categorias (`id_categoria`, `nombre`) VALUES "
-             . "(NULL, '{$this->_nombre}')";
+        $sql = "INSERT INTO categorias (`id_categoria`, `nombre`, `id_estado_atributo`) VALUES "
+             . "(NULL, '{$this->_nombre}', 1)";
 
         $database->insertar($sql);
 

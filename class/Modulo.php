@@ -21,7 +21,6 @@ class Modulo {
         return $this;
     }
 
-
     public function getDescripcion()
     {
         return $this->_descripcion;
@@ -32,11 +31,15 @@ class Modulo {
         return $this;
     }
 
-     public function getDirectorio()
+    public function getDirectorio()
     {
         return $this->_directorio;
     }
-
+    public function setDirectorio($_directorio)
+    {
+        $this->_directorio = $_directorio;
+        return $this;
+    }
 
 
 
@@ -46,6 +49,7 @@ class Modulo {
         $modulo = new Modulo();
         $modulo->_idModulo = $datos["id_modulo"];
         $modulo->_descripcion = $datos["descripcion"];
+        $modulo->_directorio = $datos["directorio"];
         
         return $modulo;
     }
@@ -62,12 +66,9 @@ class Modulo {
         $listadoModulos= [];
 
         while ($registro = $datos->fetch_assoc()) {
-
             $modulo = self::_crearModulo($registro);
-
             $listadoModulos[] = $modulo;
         }
-
         return $listadoModulos;
     }
 
@@ -78,8 +79,8 @@ class Modulo {
 
         $database = new MySQL();
 
-        $sql = "INSERT INTO modulos (`id_modulo`, `descripcion`) VALUES "
-             . "(NULL, '{$this->_descripcion}')";
+        $sql = "INSERT INTO modulos (`id_modulo`, `descripcion`, `directorio`) VALUES "
+             . "(NULL, '{$this->_descripcion}', '{$this->_directorio}')";
 
         $database->insertar($sql);
 
@@ -127,19 +128,22 @@ class Modulo {
 
         $database = new MySQL();
 
+        $sql = "DELETE FROM perfiles_modulos WHERE id_modulo = " . $id;
+        $database->darBaja($sql);
         $sql = "DELETE FROM modulos WHERE id_modulo = " . $id;
-        
         $database->darBaja($sql);
     }
 
 
     public static function obtenerPorIdPerfil($idPerfil) {
 
-        $sql = "SELECT m.id_modulo, m.descripcion "
-             . "FROM modulos m"
+        $sql = "SELECT m.id_modulo, m.descripcion, m.directorio "
+             . "FROM modulos m "
              . "JOIN perfiles_modulos pm ON pm.id_modulo = m.id_modulo "
              . "JOIN perfiles p ON p.id_perfil = pm.id_perfil "
              . "WHERE pm.id_perfil = {$idPerfil}";
+        // echo($sql);
+        // exit;
 
         $databse = new MySQL();
         $datos = $databse->consultar($sql);
