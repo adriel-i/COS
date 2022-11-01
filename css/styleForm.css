@@ -1,0 +1,171 @@
+h3 {
+    font-family: Open Sans;
+    color: dimgrey;
+    display: inline-block;
+    padding: 5px;
+}
+
+img.rombo {
+	width: 15px;
+	padding-right: 5px;
+	padding-left: 10px;
+	display: inline-block;
+}
+label {
+	font-family: Calibri;
+	font-size: 17.5px;
+	display: inline-block;
+}
+input, select {
+	padding: 5px;
+	background-color: #DCF2ED;
+	border-color: #BED7D1;
+	font-family: Calibri;
+	font-size: 15px;
+	margin-bottom: 20px;
+	width: 150px;
+	border: none;
+}
+
+button.add {
+	width: 100px;
+	background:url('../imagenes/svg/mas.svg') no-repeat;
+	background-position: 5% 50%;
+	display: inline-block;
+	padding: 10px;
+	padding-left: 10%;
+	font-family: Open Sans;
+	font-size: 15px;
+	float: right;
+	border: none;
+	margin-right: 6%;
+}
+button.add {
+	display: inline-block;
+	background-color: #DCF2ED;
+}
+button.buscar {
+	width: 100px;
+	display: inline-block;
+	padding: 10px;
+	font-size: 15px;
+	border: none;
+	color: floralwhite;
+	background-color: #47b39c;
+}
+button.buscar:hover {
+	background-color: #3e9885;
+}
+
+
+div.form {
+	display: inline-block;
+    border: 3px solid;
+    border-color: #47b39c;
+    margin-bottom: 40px;
+    padding: 15px;
+}
+
+button:hover {
+	background-color: #BED7D1;
+}
+
+form {
+	padding: 15px;
+}
+
+button.addContact {
+	padding: 10px;
+	font-family: Open Sans;
+	font-size: 15px;
+	margin-left: 350px;
+}
+div.contenedor{  
+    display: flex;     
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+div.right {
+	display: inline-block;
+	position: relative;
+	width: 325px;
+	/*background-color: red;*/
+	vertical-align: text-bottom;
+}
+
+div.left {
+	display: inline-block;
+	width: 350px;
+	/*background-color: green;*/
+}
+
+label{
+  display: inline-block;
+  width: 110px;
+}
+label.sinMargen {
+  display: inline-block;
+  width: auto;
+}
+
+div.rightDomicilio {
+	display: block;
+	position: relative;
+	margin-left: 400px;
+	margin-top: -36%;
+}
+
+div.cboServiciosUsuario {
+	display: inline-block;
+    border: 3px solid;
+    position: absolute;
+    border-color: #86DECC;
+    margin-top: 24.5%;
+    margin-left: -3px;
+}
+input#serviSearch {
+	background: url('../imagenes/svg/busqueda.svg') no-repeat;
+	width: 50%;
+	background-color: #DCF2ED;
+	padding-left: 10%;
+}
+
+div.search {
+	display: block;
+	text-align: center;
+}
+
+h3#or {
+	display: inline-block;
+	padding-top: -10%;
+}
+form.sinBottom {
+	margin-bottom: -10%;
+}
+
+
+div.required label:after {
+  content: "*";
+  color: red;
+  float: right;
+}
+
+span {
+	color: red;
+	display: block;
+	margin-left: 50%;
+	font-size: 13px;
+}
+
+h3 {
+	background-color: #fec053;
+	padding-left: 5%;
+	position: relative;
+	left: -2.3%;
+	color: floralwhite;
+}
+div.fechaHora {
+	margin-left: 2%;
+}

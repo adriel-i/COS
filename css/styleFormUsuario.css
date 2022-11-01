@@ -1,0 +1,201 @@
+div.contenedor {
+	display: block;
+	border: 1px solid;
+	font-family: Open Sans;
+	font-size: 15px;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-bottom: 3%;
+}
+
+img.rombo {
+	width: 15px;
+	padding-right: 5px;
+}
+
+input, select {
+	padding: 5px;
+	background-color: #DCF2ED;
+	border-color: #BED7D1;
+	font-family: Calibri;
+	font-size: 15px;
+	margin-bottom: 20px;
+	width: 150px;
+	border: none;
+}
+
+div.rightDatos {
+	float: right;
+	margin-top: -33%;
+	margin-right: 10%;
+}
+
+div.leftDatos {
+	margin-left: 10%;
+}
+
+div.rightDomicilio {
+	float: right;
+	margin-top: -44%;
+	margin-right: 10%;
+}
+
+div.rightUsuario {
+	float: right;
+	margin-top: -33%;
+	margin-right: 10%;
+}
+
+div#datosDomicilioYContacto {
+	display: none;
+}
+
+div#datosUsuario {
+	display: none;
+}
+
+div.cabecera {
+	background-color: #DCF2ED;
+	display: inline-flex;
+	width: 100%;
+	margin: 0px;
+	border-bottom: 1px solid;
+}
+
+div#divMensaje {
+	padding: 3%;
+}
+
+h2#paso1 {
+	background-color: #BED7D1;
+	margin: 0px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-right: 11.9%;
+	padding-left: 11.9%;
+	border-right: 1px solid;
+}
+
+h2#paso2 {
+	margin: 0px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-right: 12.1%;
+	padding-left: 12.1%;
+	border-right: 1px solid;
+}
+
+
+h2#paso3 {
+	margin: 0px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-right: 11.9%;
+	padding-left: 11.9%;
+}
+
+button {
+	padding: 10px;
+	font-family: Open Sans;
+	font-size: 15px;
+	border: none;
+	background-color: #DCF2ED;
+	margin-left: 34%;
+	width: 100px;
+}
+
+button:hover {
+	background-color: #BED7D1;
+}
+ 
+div.botones1, div.botones2, div.botones3 {
+	display: block;
+	border-top: 1px ;
+	border-top-style: groove;
+	padding: 1%;
+}
+
+button#siguiente {
+	margin-left: 5%;
+}
+
+button#completar {
+	margin-left: 5%;
+}
+
+label {
+	margin-bottom: 10px;
+}
+
+label, input, select {
+	display: block;
+}
+
+label, img.rombo {
+	display: inline-block;
+
+}
+
+div.tablaVertical th {
+    background-color: #DCF2ED;
+}
+
+div.tablaVertical table, th{
+    border: 1px solid;
+    border-color: #DCF2ED;
+}
+
+th {
+    padding: 5px;
+    text-transform: uppercase;
+    font-family: Open Sans;
+    font-size: 15px;
+    color: dimgrey;
+}
+
+td {
+    padding: 5px;
+    font-size: 11;
+    font-family: calibri;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #DCF2ED;
+}
+
+table {
+    border-collapse: collapse; 
+    border-spacing: 0;
+    margin: 50px;
+    table-layout: auto;
+    text-align: center;
+}
+
+button#botonTabla {
+	padding: 10px;
+	font-family: Open Sans;
+	font-size: 15px;
+	border: none;
+	background-color: #DCF2ED;
+	width: 100px;
+	margin-left: 0%;
+}
+caption {
+	font-family: Open Sans;
+}
+
+button#botonTabla:hover {
+	background-color: #BED7D1;
+}
+
+table#tablaVertical {
+	display: none;
+}
+
+div.contenedorTabla{  
+    display: flex;     
+    align-items: center;
+    justify-content: center;
+}
+img.rombo {
+	image: url("C:/wamp/wwww/Programacion_3/COS_2.0/imagenes/Icons/romboV.png");
+}

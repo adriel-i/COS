@@ -1,0 +1,46 @@
+
+div.contenedorDashboard {
+	min-height: 700px;
+
+}
+
+div.rectanguloIzquierda, div.servicios {
+	display: inline-block;
+    border: 3px solid;
+    border-color: #47b39c;
+    align-content: center;
+    margin-top: 3%;
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 50%;
+	height: 50%;
+}
+
+div.servicios {
+	float: right;
+	margin-left: -5%;
+}
+
+div.rectanguloIzquierda:hover, div.servicios:hover, div.cuadroDerecha:hover, div.cuadroIzquierda:hover {
+	transform:scale(1.05);
+}
+
+div.cuadroDerecha, div.cuadroIzquierda {
+	display: inline-block;
+    border: 3px solid;
+    border-color: #47b39c;
+    align-content: center;
+	margin-top: 3%;
+	margin-right: 5%;
+	width: 30%;
+}
+div.cuadroDerecha {
+	float: right;
+}
+div.cuadroIzquierda {
+	float: left;
+	margin-left: 5%;
+	margin-right: -5%;
+}
+
+

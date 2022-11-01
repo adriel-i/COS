@@ -1,0 +1,58 @@
+body {
+  background-color: #FCD000;
+}
+
+.ticket {
+  position: relative;
+  box-sizing: border-box;
+  width: 350px;
+  height: 450px;
+  margin: 150px auto 0;
+  padding: 20px;
+  border-radius: 10px;
+  background: #FBFBFB;
+  box-shadow: 2px 2px 15px 0px #AB9B0D;
+  
+}
+img {
+  width: 35%;
+  display: block;
+  margin: auto;
+}
+table{
+	margin-top: 25px;
+	border-collapse: collapse;
+  width: 100%;
+  font-family: sans-serif;
+}
+th, td {
+  text-align: justify;
+  font-size: 90%;
+  border-collapse: collapse;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+
+th {
+  width: 115px;
+}
+
+#fecha, #hora, #horah {
+  text-align: right;
+  width: 75px;
+}
+#horah {
+  position: absolute;
+  margin-left: 148px;
+  padding-top: 0px;
+}
+#hora {
+  padding-top: 0px;
+  padding-right: 17px;
+}
+
+thead {
+  border-bottom: groove;
+
+
+}

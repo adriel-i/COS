@@ -1,0 +1,371 @@
+body {
+    font-family: calibri;
+}
+
+table {
+    border-collapse: collapse; 
+    border-spacing: 0;
+    table-layout: auto;
+    text-align: center;
+    padding-top: 5%;
+}
+
+tbody {
+    border: 1px solid;
+    border-color: red;
+}
+thead {
+    background-color: #DCF2ED;
+    border: 2px solid;
+    border-color: #DCF2ED;
+}
+
+th {
+    padding: 5px;
+    text-transform: uppercase;
+    font-family: Open Sans;
+    font-size: 13px;
+    color: dimgrey;
+}
+
+td {
+    padding: 5px;
+    font-size: 11;
+    font-family: calibri;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #DCF2ED;
+    background-color: transparent;
+    align-items: center;
+}
+
+td a {
+    text-decoration:none;
+    border: 1px solid;
+    border-color: grey;
+    display: block;
+    background-color: #DCF2ED;
+    color: black;
+    padding: 3px;
+}
+
+td a.botonTabla {
+    margin-bottom: 2px;
+    margin-top: 4px;
+    width: 70%;
+    padding: 2%;
+    display: inline-block;
+    border-style: none;
+}
+
+#botonCancelar {
+    margin-top: 4px;
+    color: white;
+    background-color: #ec6b56; /* Red */
+    padding: 3px;
+}
+
+#botonCancelar:hover {
+    background-color: #db6450; /* Red */
+}
+
+td a.accion2 {
+    margin-top: 4px;
+    color: red;
+    background-color: #f44336; /* Red */
+}
+
+
+img.mas {
+    width: 20px;
+    vertical-align: -2px;
+    margin-right: 5px;
+}
+
+img.mas:hover{
+    transform: scale(1.5);
+    /*transform-style: !important;*/
+    transition-duration: 0.3s;
+}
+
+td a:hover {
+    background-color: #BED7D1;
+}
+
+div.tabla {
+    display: inline-block;
+    border: 3px solid;
+    border-color: #47b39c;
+    /*margin: 50px;*/
+    align-content: center;
+}
+
+div.tablaSinMargenDerecho {
+    display: inline-block;
+    border: 3px solid;
+    border-color: #86DECC;
+    margin: 50px;
+    margin-right: 0px;
+    /*margin-left: 300px;*/
+}
+
+div.contenedor{  
+    display: flex;   
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+
+}
+div.centrar{  
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
+div.tablaServiciosUsuario {
+    display: inline-block;
+    border: 3px solid;
+}
+
+h3 {
+    color: floralwhite;
+    display: inline-block;
+    background-color: #fec053;
+    padding: 5px;
+    padding-left: 40px;
+}
+
+h3.defasado {
+    margin-left: 5px;
+}
+a.add {
+    color: dimgrey;
+    text-decoration: none;
+    width: 150px;
+    background:url('../imagenes/svg/mas.svg') no-repeat;
+    background-position: 45% 50%;
+    display: inline-block;
+    padding: 10px;
+    padding-left: 7%;
+    text-align: right;
+    font-size: 15px;
+    display: inline-block;
+    background-color: #DCF2ED;
+}
+a.add:hover {
+    color: floralwhite ;
+    background-color: #BED7D1;
+}
+a.colspan {
+    display: inline-block;
+    width: 50%;
+    padding: 2%;
+}
+div.tablaVertical {
+    display: inline-block;
+}
+div.tablaVertical th {
+    background-color: #F6F6F6;
+}
+div.tablaVertical table, th{
+    border: 1px solid;
+    border-color: #F6F6F6;
+}
+
+a#verDetalle {
+    display: inline-block;
+    width: 30%;
+    text-transform: uppercase;
+}
+
+
+a#valorServicio {
+    background-color: #EAFBF7;
+}
+
+button.botonGuardar {
+    display: none;
+    text-align: center;
+    margin-left: 37%;
+    padding: 5px;
+    font-family: Open Sans;
+    /*font-size: 15px;*/
+    border: none;
+    margin-top: 10px;
+    background-color: #DCF2ED;
+}
+
+button.botonGuardar:hover {
+    background-color: #BED7D1;
+}
+input.numValor {
+    text-align: left;
+    width: 25%;
+    border: none;
+    font-size: 15px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+a.mas img.mas {
+    float: right;
+    width: 30px;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+a#botonDetalle, a#botonFinalizar {
+    display: none;
+}
+#botonNaranja {
+    padding: 2%;
+    /*width: 50%;*/
+    background-color: #ffc154;
+    color: #FFF4DF;
+    font-size: 17px;
+    border-style: none;
+}
+#botonNaranja:hover {
+    background-color: #dea846;
+    color: white;
+}
+a#botonTicket {
+    padding: 2%;
+    width: 50%;
+    display: none;
+    background-color: #ffc154;
+    color: #FFF4DF;
+    font-size: 17px;
+    border-style: none;
+}
+a#botonTicket:hover {
+    background-color: #dea846;
+    color: white;
+}
+
+a.usuario {
+    text-decoration:none;
+    border: none;
+    background-color: #EAFBF7;
+}
+a.usuario:hover {
+    background-color: transparent;
+    text-decoration: underline;
+    color: #FCD000;
+}
+
+a#volverInicio {
+
+    display: inline-block;
+    width: 30%;
+    text-transform: uppercase;
+    text-decoration:none;
+    border: none;
+    background-color: #47b39c;
+    color: floralwhite;
+    text-align: center;
+    padding: 1%;
+    margin-left: 35%;
+    margin-top: 2%;
+}
+
+a#volverInicio:hover {
+    background-color: #3f9f8a;
+}
+
+table.verticalTable {
+    width: 450px;
+    height: auto;
+}
+
+td#fecha {
+    width: 80px;
+}
+/*Inicio de estilo de estrellas de calificacion*/
+
+#form p {
+  text-align: center;
+}
+
+#form label {
+  font-size: 20px;
+}
+
+input.estrella[type="submit"] {
+  display: none;
+  /*text-decoration: none;*/
+}
+
+label.estrella {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl; /*cambia la direccion de la escritura (de la derecha a la izquierda)*/
+  unicode-bidi: bidi-override; /*cambia la direccion del texto*/
+}
+
+label.estrella:hover,
+label.estrella:hover ~ label.estrella {
+  color: orange;
+}
+
+input.estrella[type="submit"]:checked ~ label {
+  color: orange;
+}
+
+button#btnCalificar {
+    display:block;
+    margin-top: 3%;
+}
+
+form#form {
+    display: none;
+}
+
+/*fin de estilo de estrellas de calificacion*/
+
+/* estilo estrellas estaticas */
+
+#star-rating li {
+  display: inline-block;
+  color: #95a5a6; /* gris (normal) */
+  font-size: 20px;
+}
+/*fin estilo estrellas estaticas*/
+
+div.tablaVertical {
+  display: inline-block;
+  padding: 2%;
+}
+.reputacion {
+    display: block;
+}
+
+tfoot {
+    align-content: center;
+}
+
+button.buscar {
+    display: inline-block;
+    padding: 1.5%;
+    font-size: 15px;
+    border: none;
+    color: floralwhite;
+    background-color: #47b39c;
+}
+button.buscar:hover {
+    background-color: #3e9885;
+}
+
+select {
+    border-radius: 5px;
+}
