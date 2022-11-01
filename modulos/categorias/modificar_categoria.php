@@ -27,9 +27,10 @@ $categoria = Categoria::obtenerPorId($id_categoria);
 		<br><br>
 
 		<input type="submit" name="Guardar" value="Actualizar">
-
-
 	</form>
+	<footer>
+		<?php require_once "../../footer.html";?>
+	</footer>
 
 </body>
 </html>

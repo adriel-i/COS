@@ -23,7 +23,7 @@ $listadoSubcategorias = Subcategoria::obtenerTodos();
 		<br><br>
 
 		Subcategoria:
-		<select name="cboSubcategoria">
+		<select name="cboSubcategoria" required>
 		    <option value="NULL">---Seleccionar---</option>
 
 		    <?php foreach ($listadoSubcategorias as $subcategoria): ?>
@@ -40,6 +40,9 @@ $listadoSubcategorias = Subcategoria::obtenerTodos();
 		<input type="submit" name="Guardar">
 		
 	</form>
+	<footer>
+		<?php require_once "../../footer.html";?>
+	</footer>
 
 </body>
 </html>

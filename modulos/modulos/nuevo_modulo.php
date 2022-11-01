@@ -21,12 +21,15 @@ $listadoPerfiles = Perfil::obtenerTodos();
 		
 		Descripcion: <input type="text" name="txtDescripcion">
 		<br><br>
-
+		Directorio: <input type="text" name="txtDirectorio">
 		<br><br>
 
 		<input type="submit" name="Guardar">
 		
 	</form>
+	<footer>
+		<?php require_once "../../footer.html";?>
+	</footer>
 
 </body>
 </html>

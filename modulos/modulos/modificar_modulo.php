@@ -3,7 +3,6 @@
 require_once "../../class/Modulo.php";
 
 $id_modulo = $_GET['id_modulo'];
-
 $modulo = Modulo::obtenerPorId($id_modulo);
 
 ?>
@@ -14,7 +13,7 @@ $modulo = Modulo::obtenerPorId($id_modulo);
 	<title></title>
 </head>
 <body>
-	
+<br>
 <?php require_once "../../menu.php"; ?>
 
 	<form method="POST" action="procesar_modificacion.php">
@@ -28,9 +27,10 @@ $modulo = Modulo::obtenerPorId($id_modulo);
 
 		<input type="submit" name="Guardar" value="Actualizar">
 
-
-	</form>
-
+	 </form>
+	 <footer>
+		<?php require_once "../../footer.html";?>
+	</footer>
 </body>
 </html>
 

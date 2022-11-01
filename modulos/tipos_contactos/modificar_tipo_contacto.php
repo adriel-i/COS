@@ -31,6 +31,10 @@ $tipoContacto = TipoContacto::obtenerPorId($id_tipo_contacto);
 
     </form>
 
+    <footer>
+        <?php require_once "../../footer.html";?>
+    </footer>
+
 </body>
 </html>
 

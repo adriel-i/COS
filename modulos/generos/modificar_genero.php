@@ -27,9 +27,10 @@ $genero = Genero::obtenerPorId($id_genero);
         <br><br>
 
         <input type="submit" name="Guardar" value="Actualizar">
-
-
     </form>
+    <footer>
+        <?php require_once "../../footer.html";?>
+    </footer>
 
 </body>
 </html>

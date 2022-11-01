@@ -1,7 +1,7 @@
 <?php
 
 require_once "../../class/TipoImpuesto.php";
-require_once "../../menu.php";
+require_once "../../menuSub.php";
 
 $lista = TipoImpuesto::obtenerTodos();
 
@@ -11,6 +11,8 @@ $lista = TipoImpuesto::obtenerTodos();
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" href="../../css/styleMenu.css">
+	<link rel="stylesheet" href="../../css/styleTabla.css">
 </head>
 <body>
 
@@ -20,35 +22,38 @@ $lista = TipoImpuesto::obtenerTodos();
 	<br>
 	<br>
 
-<table border="1">
-	<tr>
-		<th>ID Tipo Impuesto</th>
-		<th>Descripcion</th>
-		<th>Porcentaje</th>
-		<th>Acciones</th>
-
-	</tr>
-
-	<?php foreach  ($lista as $tipoImpuesto): ?>
-
+	<table border="1">
 		<tr>
-			
-			<td><?php echo $tipoImpuesto->getIdTipoImpuesto(); ?></td>
-			<td><?php echo $tipoImpuesto->getDescripcion(); ?></td>
-			<td><?php echo $tipoImpuesto->getPorcentaje(); ?></td>
-			<td>
-				<a href="modificar_tipo_impuesto.php?id_tipo_impuesto=<?php echo $tipoImpuesto->getIdTipoImpuesto(); ?>">Modificar</a> |
-			
-				<a href="procesar_baja.php?id_tipo_impuesto=<?php echo $tipoImpuesto->getIdTipoImpuesto(); ?>">Eliminar</a>
-			</td>
-
-
+			<th>ID Tipo Impuesto</th>
+			<th>Descripcion</th>
+			<th>Porcentaje</th>
+			<th>Acciones</th>
 
 		</tr>
 
-	<?php endforeach ?>
+		<?php foreach  ($lista as $tipoImpuesto): ?>
 
-</table>
+			<tr>
+				
+				<td><?php echo $tipoImpuesto->getIdTipoImpuesto(); ?></td>
+				<td><?php echo $tipoImpuesto->getDescripcion(); ?></td>
+				<td><?php echo $tipoImpuesto->getPorcentaje(); ?></td>
+				<td>
+					<a href="modificar_tipo_impuesto.php?id_tipo_impuesto=<?php echo $tipoImpuesto->getIdTipoImpuesto(); ?>">Modificar</a> |
+				
+					<a href="procesar_baja.php?id_tipo_impuesto=<?php echo $tipoImpuesto->getIdTipoImpuesto(); ?>">Eliminar</a>
+				</td>
+
+
+
+			</tr>
+
+		<?php endforeach ?>
+
+	</table>
+	<footer>
+		<?php require_once "../../footer.html";?>
+	</footer>
 
 </body>
 </html>

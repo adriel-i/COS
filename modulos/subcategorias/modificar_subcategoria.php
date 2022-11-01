@@ -55,6 +55,9 @@ $subcategoria = Subcategoria::obtenerPorId($id_subcategoria);
 
 
 	</form>
+	<footer>
+		<?php require_once "../../footer.html";?>
+	</footer>
 
 </body>
 </html>

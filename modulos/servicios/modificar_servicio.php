@@ -15,47 +15,51 @@ $servicio = Servicio::obtenerPorId($id_servicio);
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" href="../../css/styleMenu.css">
+	<link rel="stylesheet" href="../../css/styleTabla.css">
+
 </head>
 <body>
 	
-<?php require_once "../../menu.php"; ?>
+<?php require_once "../../menuSub.php"; ?>
 
 	<form method="POST" action="procesar_modificacion.php">
+		<div class="contenedor">
+			<div class="form" name="divMensaje" id="divMensaje">
 
-		<h3>Modifique el servicio</h3>
-		<br>
-		<input type="hidden" name="txtIdServicio" value="<?php echo $id_servicio; ?>">
-		
-		Nombre: <input type="text" name="txtNombre" value="<?php echo $servicio->getNombre(); ?>">
-		<br><br>
+				<h3>Modifique el servicio</h3>
+				<br>
+				<input type="hidden" name="txtIdServicio" value="<?php echo $id_servicio; ?>">
+				
+				Nombre: <input type="text" name="txtNombre" value="<?php echo $servicio->getNombre(); ?>">
+				<br><br>
 
-		Subcategoria:
-		<select name="cboSubcategoria">
-		    <option value="NULL">---Seleccionar---</option>
+				Subcategoria:
+				<select name="cboSubcategoria">
+				    <option value="NULL">---Seleccionar---</option>
 
-		    <?php foreach ($listadoSubcategorias as $subcategoria): ?>
+				    <?php foreach ($listadoSubcategorias as $subcategoria): ?>
 
-		    	<?php
-		    	$selected = "";
+				    	<?php
+				    	$selected = "";
 
-		    	if ($subcategoria->getIdSubcategoria() == $servicio->getIdSubcategoria()) {
-		    		$selected = "SELECTED";
-		    	}
+				    	if ($subcategoria->getIdSubcategoria() == $servicio->getIdSubcategoria()) {
+				    		$selected = "SELECTED";
+				    	}
 
-		    	?>
-		    	<option <?php echo $selected; ?> value="<?php echo $subcategoria->getIdSubcategoria(); ?>">
-		    		<?php echo $subcategoria->getNombre(); ?>
-		    	</option>
+				    	?>
+				    	<option <?php echo $selected; ?> value="<?php echo $subcategoria->getIdSubcategoria(); ?>">
+				    		<?php echo $subcategoria->getNombre(); ?>
+				    	</option>
 
-		    <?php endforeach ?>
-		</select>
-		<br><br>
+				    <?php endforeach ?>
+				</select>
+				<br><br>
 
-		<input type="submit" name="Guardar" value="Actualizar">
-
-
+				<input type="submit" name="Guardar" value="Actualizar">
+			</div>
+		</div>
 	</form>
 
 </body>
 </html>
-

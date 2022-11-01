@@ -40,6 +40,9 @@ $listadoCategorias = Categoria::obtenerTodos();
 		<input type="submit" name="Guardar">
 		
 	</form>
+	<footer>
+		<?php require_once "../../footer.html";?>
+	</footer>
 
 </body>
 </html>

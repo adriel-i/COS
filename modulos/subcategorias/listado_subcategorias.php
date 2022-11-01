@@ -1,7 +1,7 @@
 <?php
 // ../ ES PARA SALIR DEL DIRECTORIO
 require_once "../../class/Subcategoria.php";
-require_once "../../menu.php";
+require_once "../../menuSub.php";
 
 $lista = Subcategoria::obtenerTodos();
 
@@ -13,6 +13,8 @@ $lista = Subcategoria::obtenerTodos();
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" href="../../css/styleMenu.css">
+	<link rel="stylesheet" href="../../css/styleTabla.css">
 </head>
 <body>
 
@@ -22,35 +24,38 @@ $lista = Subcategoria::obtenerTodos();
 	<br>
 	<br>
 
-<table border="1">
-	<tr>
-		<th>ID Subcategoria</th>
-		<th>Nombre</th>
-		<th>Categoria</th>
-		<th>Acciones</th>
-
-	</tr>
-
-	<?php foreach  ($lista as $subcategoria): ?>
-
+	<table border="1">
 		<tr>
-			
-			<td><?php echo $subcategoria->getIdSubcategoria(); ?></td>
-			<td><?php echo $subcategoria->getNombre(); ?></td>
-			<td><?php echo $subcategoria->categoria->getNombre(); ?></td>
-			<td>
-				<a href="modificar_subcategoria.php?id_subcategoria=<?php echo $subcategoria->getIdSubcategoria(); ?>">Modificar</a> |
-			
-				<a href="procesar_baja.php?id_subcategoria=<?php echo $subcategoria->getIdSubcategoria(); ?>">Eliminar</a>
-			</td>
-
-
+			<th>ID Subcategoria</th>
+			<th>Nombre</th>
+			<th>Categoria</th>
+			<th>Acciones</th>
 
 		</tr>
 
-	<?php endforeach ?>
+		<?php foreach  ($lista as $subcategoria): ?>
 
-</table>
+			<tr>
+				
+				<td><?php echo $subcategoria->getIdSubcategoria(); ?></td>
+				<td><?php echo $subcategoria->getNombre(); ?></td>
+				<td><?php echo $subcategoria->categoria->getNombre(); ?></td>
+				<td>
+					<a href="modificar_subcategoria.php?id_subcategoria=<?php echo $subcategoria->getIdSubcategoria(); ?>">Modificar</a> |
+				
+					<a href="procesar_baja.php?id_subcategoria=<?php echo $subcategoria->getIdSubcategoria(); ?>">Eliminar</a>
+				</td>
+
+
+
+			</tr>
+
+		<?php endforeach ?>
+
+	</table>
+	<footer>
+		<?php require_once "../../footer.html";?>
+	</footer>
 
 </body>
 </html>

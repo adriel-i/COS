@@ -32,6 +32,10 @@ $tipoImpuesto = TipoImpuesto::obtenerPorId($id_tipo_impuesto);
 
     </form>
 
+    <footer>
+        <?php require_once "../../footer.html";?>
+    </footer>
+
 </body>
 </html>
 
